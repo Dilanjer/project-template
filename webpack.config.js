@@ -12,6 +12,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist')
   },
   devServer: {
+    overlay: true,
     contentBase: path.join(__dirname, 'dist'),
     compress: true,
     port: 9000
@@ -57,7 +58,7 @@ module.exports = {
         use: 'file-loader'
       },
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(js)$/,
         exclude: /node_modules/,
         use: [
           {
